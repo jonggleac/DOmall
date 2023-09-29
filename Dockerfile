@@ -9,11 +9,15 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+
+# 애플리케이션 소스 추가
+COPY . .
+
+
 # 개발 환경에서는 아래의 명령어를 사용할 것.
 # RUN npm ci --only=development
 RUN npm run build
 
-# 애플리케이션 소스 추가
-COPY . .
+
 
 CMD [ "npm", "start" ]
