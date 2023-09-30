@@ -18,6 +18,6 @@ COPY . .
 # RUN npm ci --only=development
 RUN npm run build
 
-
+EXPORT 3000
 
 CMD [ "npm", "start" ]
