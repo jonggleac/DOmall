@@ -5,8 +5,6 @@ import { StoreProvider } from '../utils/Store'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
-var url = `http:///contents/${search}`
-
   return (
     <SessionProvider session={session}>
       <StoreProvider>
